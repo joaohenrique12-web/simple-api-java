@@ -42,6 +42,5 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'fiap-simple-api-dev-v1'
-        slot-name: 'production'
         publish-profile: ${{ secrets.AZURE_PROFILE }}
         images: 'index.docker.io/${{ secrets.DOCKERHUB_USERNAME }}/simple-api-java:${{ github.sha }}'
